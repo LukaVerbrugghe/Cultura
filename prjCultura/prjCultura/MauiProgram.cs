@@ -13,6 +13,12 @@ namespace prjCultura
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                    fonts.AddFont("DMMono-Italic.ttf", "DMMonoItalic");
+                    fonts.AddFont("DMMono-Light.ttf", "DMMonoLight");
+                    fonts.AddFont("DMMono-LightItalic.ttf", "DMMonoLightItalic");
+                    fonts.AddFont("DMMono-Medium.ttf", "DMMonoMedium");
+                    fonts.AddFont("DMMono-MediumItalic.ttf", "DMMonoMediumItalic");
+                    fonts.AddFont("DMMono-Regular.ttf", "DMMonoRegular");
                 });
 
 #if DEBUG
