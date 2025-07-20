@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="prjCultura.Signup"
+             Title="Signup"
+             BackgroundColor="{StaticResource CulturaBackgroundFront}">
+    <ScrollView>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="15"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="15"/>
+            </Grid.ColumnDefinitions>
+
+            <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="5" Padding="10" Grid.Column="1">
+                <FlexLayout JustifyContent="Center" AlignItems="Center" Direction="Row" HeightRequest="300">
+                    <Image Source="logoplaceholder.png" WidthRequest="300" ></Image>
+                </FlexLayout>
+
+                <Entry x:Name="txtUsername" Placeholder="Username" BackgroundColor="White" TextColor="{StaticResource CulturaText}" WidthRequest="300" IsSpellCheckEnabled="False" Grid.Column="1" FontFamily="DMMonoRegular"></Entry>
+
+                <Entry x:Name="txtEmail" Placeholder="E-mail" BackgroundColor="White" TextColor="{StaticResource CulturaText}" WidthRequest="300" IsSpellCheckEnabled="False" Grid.Column="1" FontFamily="DMMonoRegular"></Entry>
+
+                <HorizontalStackLayout Spacing="5" Grid.Column="1" HorizontalOptions="Center">
+                    <Entry x:Name="txtPassword" Placeholder="Password" BackgroundColor="White" TextColor="{StaticResource CulturaText}" WidthRequest="250" IsPassword="True" FontFamily="DMMonoRegular"></Entry>
+                    <ImageButton x:Name="btntoggleFirstPassword" Source="eyesolid.png" WidthRequest="1" Background="Transparent" Clicked="toggleShowFirstPassword"/>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Spacing="5" Grid.Column="1" HorizontalOptions="Center">
+                    <Entry x:Name="txtWachtwoordBevestigen" Placeholder="Confirm password" BackgroundColor="White" TextColor="{StaticResource CulturaText}" WidthRequest="250" IsPassword="True" FontFamily="DMMonoRegular"></Entry>
+
+                    <ImageButton x:Name="btnToggleSecondPassword" Source="eyesolid.png" WidthRequest="1" Background="Transparent" Clicked="toggleShowSecondPassword"/>
+                </HorizontalStackLayout>
+
+                <Button x:Name="btnRegistreren" Clicked="btnRegistreren_Clicked" Text="Sign up" Grid.Column="1" WidthRequest="300" BackgroundColor="{StaticResource CulturaPrimary}" TextColor="{StaticResource CulturaText}"></Button>
+
+                <Label x:Name="Login" Text="Already have an account? Log in!" TextColor="{StaticResource CulturaText}" TextDecorations="Underline" HorizontalOptions="Center" Margin="0,10" FontFamily="DMMonoRegular">
+
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="lblGoToLogin_Tapped"></TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+
+                </Label>
+            </VerticalStackLayout>
+        </Grid>
+    </ScrollView>
+</ContentPage>
