@@ -42,4 +42,11 @@
     <SolidColorBrush x:Key="Gray600Brush" Color="{StaticResource Gray600}"/>
     <SolidColorBrush x:Key="Gray900Brush" Color="{StaticResource Gray900}"/>
     <SolidColorBrush x:Key="Gray950Brush" Color="{StaticResource Gray950}"/>
+
+    <Color x:Key="CulturaPrimary">#3C6E71</Color>
+    <Color x:Key="CulturaPrimaryDark">#0C1B33</Color>
+    <Color x:Key="CulturaSecondary">#BA8F95</Color>
+    <Color x:Key="CulturaBackgroundFront">#CAB6CD</Color>
+    <Color x:Key="CulturaBackgroundBack">#CFBCDF</Color>
+    <Color x:Key="CulturaText">Black</Color>
 </ResourceDictionary>

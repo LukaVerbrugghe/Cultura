@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="prjCultura.MainPage"
+             Title="Login"
+             BackgroundColor="{StaticResource CulturaBackgroundBack}">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <ScrollView Grid.Column="1">
+            <FlexLayout JustifyContent="Center" AlignItems="Center" Direction="Column" >
+                <Image Source="logoplaceholder.png" HeightRequest="300" Margin="0,0,0,25"></Image>
+
+                <Entry x:Name="txtEmail" Placeholder="E-mail" BackgroundColor="White" TextColor="{StaticResource CulturaText}" WidthRequest="300" IsSpellCheckEnabled="False" Grid.Column="1" Margin="0,0,0,5" FontFamily="DMMonoRegular"></Entry>
+                <HorizontalStackLayout Spacing="5">
+
+                    <Entry x:Name="txtPaswoord" Placeholder="Password" BackgroundColor="White" TextColor="{StaticResource CulturaText}" WidthRequest="250" IsPassword="True" FontFamily="DMMonoRegular"></Entry>
+                    <ImageButton x:Name="btnTogglePassword" Source="eyesolid.png" WidthRequest="1" Background="Transparent" Clicked="toggleShowPassword"/>
+                </HorizontalStackLayout>
+
+                <Label x:Name="wachtwoordVergeten" Text="Forgot your password?" TextColor="{StaticResource CulturaText}" Grid.Column="1" FlexLayout.AlignSelf="End" TextDecorations="Underline" FontFamily="DMMonoRegular">
+
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="lblForgetPassword_Clicked"></TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+
+                </Label>
+
+
+                <Button x:Name="btnInloggen" Clicked="btnLogin_Clicked" Text="Log in" WidthRequest="250" Grid.Column="1" Background="{StaticResource CulturaPrimary}" TextColor="{StaticResource CulturaText}" Margin="0,10,0,0" FontFamily="DMMonoRegular" FontSize="Medium"></Button>
+
+
+            </FlexLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>
