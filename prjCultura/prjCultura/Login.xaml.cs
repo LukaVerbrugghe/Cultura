@@ -26,7 +26,8 @@
 
         private async void btnSignup_Clicked(object sender, EventArgs e)
         {
-
+            //navigate to signup page
+            await Shell.Current.GoToAsync("Signup");
         }
     }
 }
