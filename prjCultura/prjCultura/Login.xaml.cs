@@ -23,5 +23,10 @@
         { 
         
         }
+
+        private async void btnSignup_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }
