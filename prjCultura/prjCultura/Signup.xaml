@@ -31,6 +31,15 @@
 
                     <ImageButton x:Name="btnToggleSecondPassword" Source="eyesolid.png" WidthRequest="1" Background="Transparent" Clicked="toggleShowSecondPassword"/>
                 </HorizontalStackLayout>
+                <HorizontalStackLayout HorizontalOptions="Center">
+                    <CheckBox></CheckBox>
+                    <Label Text="I have read and accepted the" TextColor="{StaticResource CulturaText}" HorizontalOptions="Center" Margin="0,10" FontFamily="DMMonoRegular" FontSize="Micro"></Label>
+                    <Label x:Name="lblViewLicense" Text="license" TextColor="{StaticResource CulturaText}" TextDecorations="Underline" HorizontalOptions="Center" Margin="0,10" FontFamily="DMMonoRegular" FontSize="Micro">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="lblViewLicense_Tapped"></TapGestureRecognizer>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </HorizontalStackLayout>
 
                 <Button x:Name="btnRegistreren" Clicked="btnRegistreren_Clicked" Text="Sign up" Grid.Column="1" WidthRequest="300" BackgroundColor="{StaticResource CulturaPrimary}" TextColor="{StaticResource CulturaText}"></Button>
 
