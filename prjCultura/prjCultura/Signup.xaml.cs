@@ -24,6 +24,6 @@ public partial class Signup : ContentPage
 
 	private async void lblGoToLogin_Tapped(object sender, EventArgs e)
     { 
-    
+		await Shell.Current.GoToAsync("///MainPage"); //MainPage is the DataTemplate for the login page, do not change
     }
 }
